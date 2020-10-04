@@ -1,0 +1,62 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-white" role="navigation">
+  <div class="fluid-container">
+
+    <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#task-bar" aria-controls="task-bar" aria-expanded="false" aria-label="Toggle Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+  <span class="rinzy-logo"> Rinzy Reviews</span>
+  <div class="collapse navbar-collapse" id="task-bar">
+    <ul class="navbar-nav ml-auto text-center">
+      <li class="navbar-item"><a class="nav-link" [routerLink]="['/articles']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">HOME</a></li>
+      <li class="dropdown hidden-md hidden-lg">
+        <a href="#" class="dropdown-toggle nav-link px-3" data-toggle="dropdown">ARCHIVES<span class="caret"></span></a>
+        <ul class="dropdown-menu list-unstyled text-center" role="menu">
+              <a href="#"><li>August 2020</li></a>
+              <a href="#"><li>July 2020</li></a>
+              <a href="#"><li>June 2020</li></a>
+              <a href="#"><li>May 2020</li></a>
+              <a href="#"><li>April 2020</li></a>
+              <a href="#"><li>March 2020</li></a>
+              <a href="#"><li>Feburary 2020</li></a>
+              <a href="#"><li>January 2020</li></a>
+              <a href="#"><li>December 2019</li></a>
+              <a href="#"><li>November 2019</li></a>
+              <a href="#"><li>October 2019</li></a>
+              <a href="#"><li>September 2019</li></a>
+              <a href="#"><li>August 2019</li></a>
+              <a href="#"><li>July 2019</li></a>
+              <a href="#"><li>June 2019</li></a>
+              <a href="#"><li>May 2019</li></a>
+              <a href="#"><li>April 2019</li></a>
+              <a href="#"><li>March 2019</li></a>
+              <a href="#"><li>Feburary 2019</li></a>
+              <a href="#"><li>January 2019</li></a>
+              <a href="#"><li>More dates</li></a>
+        </ul>
+      </li>
+      <li class="navbar-item"><a class="nav-link" routerLinkActive="active">ABOUT</a></li>
+      <li class="navbar-item"><a class="nav-link" routerLinkActive="active">CONTACT US</a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto text-center" *ngIf="auth.isAuthenticated()">
+      <li class="navbar-item"><a class="nav-link" [routerLink]="['/articles/newarticles']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">CREATE ARTICLE</a></li>
+      <li class="navbar-item"><a class="nav-link" [routerLink]="['/articles']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">ALL ARTICLE</a></li>
+    </ul>
+    <form id="searchForm">
+      <div class="form-group input-group">
+        <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search....." aria-describedby="search-text">
+        <span class="input-group-append">888<i class="fa fa-search">888</i></span> <!-------Remove later-------->
+      </div>
+      <ul class=" list-group list-group-flush"><!-------results of ngFor is passed to appfilter with argument searchTerm--------->
+        <li class="list-group-item" *ngFor="let c of characters | appFilter: searchTerm" appHighlight [searchedWord]="searchTerm"
+          [content]="c" [classToApply]= "'font-weight-bold'" [setTitle]="'true'">{{c}}</li>
+      </ul>
+    </form>
+
+  </div>
+</nav>
+<div>
+    <router-outlet></router-outlet>
+</div>
+

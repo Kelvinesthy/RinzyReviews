@@ -1,0 +1,90 @@
+<div class="container-fluid my-5 hidden-sm hidden-md hidden-lg">
+  <nav-root></nav-root>
+  <div class="row">
+    <article class="col-lg-6 col-md-7">
+      <div class="row thumbnail">
+        <a class="container-fluid" [routerLink]="['/articledetails']">
+          <section class="article-grid p-3">
+            <img class="article-img img-responsive" src="../../assets/IMG-20200723-WA0044.jpg" alt="Bad boys">
+            <h3 class="article-heading">Welcome to Rinzy Reviews Films</h3>
+            <section class="article-message">August 14, 2020 | leave a comment</section>
+          </section>
+        </a>
+      </div>
+      <article-thumb [articles]='article'></article-thumb>  <!------(click)="handleThumbnailClick(article.heading)"------>
+    </article>
+
+    <aside class="col-lg-3 col-md-3">
+      <fieldset class="text-left">
+        <legend style="font-size: 25px; border-top: solid 5px ;" class="my-3 py-3">CATEGORIES</legend>
+        <ul class="list-unstyled seconded text-left">
+          <a href="#"><li>Film Article</li></a>
+          <a href="#"><li>Film Education</li></a>
+          <a href="#"><li>Film News</li></a>
+          <a href="#"><li>Movie Article</li></a>
+          <a href="#"><li>Movie News</li></a>
+          <a href="#"><li>Movie Reviews</li></a>
+          <a href="#"><li>Opinion Article</li></a>
+          <a href="#"><li>RR Original</li></a>
+          <a href="#"><li>Tv Recap</li></a>
+          <a href="#"><li>Tv Series Articles</li></a>
+          <a href="#"><li>Tv Series News</li></a>
+          <a href="#"><li>Tv Show Review</li></a>
+          <a href="#"><li>Uncategorized</li></a>
+        </ul>
+      </fieldset>
+    </aside>
+  </div>
+</div>
+
+
+<div class="container-fluid firstBar hidden-xs">
+  <div class="row">
+    <archive-root class="col-lg-2 bg-dark hidden-sm"></archive-root>
+
+    <div class="container-fluid col-lg-10">
+      <nav-root></nav-root>
+      <div class="row">
+        <div class="container-fluid col-lg-8 col-sm-8 hidden-xs">
+          <article class="containerMain px-3">
+            <img src="../../assets/IMG-20200723-WA0045.jpg" alt="welcome-page" class="img-adapt">
+            <section class="containerOne containerTwo">
+              <small>RR ORIGINAL, UNCATEGORIZED</small>
+              <h1 class="display-4 text-left">WELCOME TO RINZY REVIEWS FILMS</h1>
+              <div class="">
+                <i class="fa fa-pinterest m-2"></i>  STICKY  |  <i class="fa fa-comment m-2"></i> LEAVE A COMMENT
+              </div>
+            </section>
+            <section class="containerOne containerThree my-3">
+              <p>It’s been a few years since I became engrossed in the art of film-watching, and a little more for story-writing. It’s also approximately a year since I nursed the idea of  having a platform where I pen my many film (movies and TV) theories and discuss film ideas with a public as enthusiastic about the art as myself. So, here we are – Rinzy Reviews Films: A dream made reality.</p>
+              <p>Though not the best attempt, I strongly believe it’s a step in the ‘write’ direction. I believe, greatly, in planting a vision and nursing it into a mission. And, I know we’ll have great times here making memories we’ll treasure for many years to come.</p>
+              <p>My name is Rinzy Talius Dike, your chief-servant and I say Welcome! Welcome! Welcome!</p>
+              <p>– Rinzy, 2016.</p>
+              <p>Edit:</p>
+
+              <p>Hey guys, thank you for sticking with RR Films over the last two years. I love y’all so much! 😍.</p>
+
+              <p>Like us on FB @ http://www.facebook.com/RinzyReviews</p>
+              <p>Follow on Twitter @ http://www.twitter.com/RinzyReviews</p>
+
+              <p>Follow on IG @ http://www.instagram.com/RinzyReviews</p>
+
+              <p>Join Whatsapp group</p>
+
+              <p>https://chat.whatsapp.com/H7m5hslbmC00TXZ6fRdCDH</p>
+
+              <p>Trust me, the conversation never stops on these platforms.</p>
+
+              <p>– Rinzy, 2018.</p>
+            </section>
+          </article>
+          <article-thumb [articles]='article'></article-thumb>  <!------(click)="handleThumbnailClick(article.heading)"------>
+        </div>
+
+        <category-root class="col-lg-3 col-sm-4"></category-root>
+      </div>
+    </div>
+  </div>
+</div>
+
+

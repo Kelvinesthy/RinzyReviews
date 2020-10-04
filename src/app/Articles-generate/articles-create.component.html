@@ -1,0 +1,47 @@
+<div class="container my-5">
+  <div class="container my-5 p-4">
+    <nav class="navbar navbar-expand-lg dark bg-dark">
+      <div class="navbar-header navbar-right">
+        <ul class="nav navbar-nav">
+          <li>
+            <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
+            <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth.currentUser.firstName}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <h1>
+    Create New Articles
+  </h1>
+  <hr> <!---------newArticle.(whatever) are all binding to the newEvent object--------->
+  <form #newArticleForm="ngForm" (ngSubmit)="saveArticle(newArticleForm.value)" autocomplete="off" novalidate>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.heading?.invalid && newArticleForm.controls.heading?.touched}">
+      <label for="articleheading" >Article Name:</label>
+      <em *ngIf="newArticleForm.controls.heading?.invalid && newArticleForm.controls.heading?.touched">Required</em>
+      <input (ngModel)="newArticle.heading" required name="heading" type="text" id="heading" class="form-control" placeholder="Input your header name">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.date?.invalid && newArticleForm.controls.date?.touched}">
+      <label for="articleDate" >Article Date:</label>
+      <em *ngIf="newArticleForm.controls.date?.invalid && (newArticleForm.controls.date?.touched)">Required</em>
+      <input (ngModel)="newArticle.date" required name="date" type="text" id="articleDate" class="form-control" placeholder="format (mm/dd/yyyy)......">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.imageUrl?.invalid && newArticleForm.controls.imageUrl?.touched}">
+      <label for="imageUrl" > Article Image input</label>
+      <em *ngIf="newArticleForm.controls.imageUrl?.invalid && (newArticleForm.controls.imageUrl?.touched && newArticleForm.controls.imageUrl?.errors.required)">Required</em>
+      <em *ngIf="newArticleForm.controls.imageUrl?.invalid && (newArticleForm.controls.imageUrl?.touched && newArticleForm.controls.imageUrl?.errors.pattern)">Must be a png or jpg url</em>
+      <input (ngModel)="newArticle.imageUrl" required name="imageUrl" type="file" id="inputfile" class="form-control" pattern=".*\/.*.(png|jpg)">
+      <img src="newArticleForm.controls.imageUrl.value" *ngIf="newArticleForm.controls.imageUrl?.valid">
+    </div>
+    <div class="form-group my-5" [ngClass]="{'error':newArticleForm.controls.message?.invalid && newArticleForm.controls.message?.touched}">
+      <label for="articleMessage" >Article message</label>
+      <em *ngIf="newArticleForm.controls.message?.invalid && newArticleForm.controls.message?.touched">Required</em>
+      <textarea name="message" required (ngModel)="newArticle.message" id="message" cols="50" rows="10" class="form-control" placeholder="Place your articles message here"></textarea>
+    </div>
+    <div class="button-group" *ngIf="auth.isAuthenticated()">
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-default" [disabled]="newArticleForm.invalid" (click)='cancel()'>Cancel</button>
+    </div>
+
+  </form>
+</div>

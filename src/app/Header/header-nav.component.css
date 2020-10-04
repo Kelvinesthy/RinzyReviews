@@ -1,0 +1,78 @@
+#carousel img{
+  height: 50vh;
+}
+#carousel p{
+  font-size: x-large !important;
+  text-transform: uppercase;
+}
+marquee{
+  margin-top: 80px !important;
+}
+
+.mygrid{
+  display: grid;
+  grid-template-columns: (8, 1fr);
+
+}
+.firstgrid{
+  grid-column: 1/2;
+}
+.secondgrid{
+  grid-column: 2/7;
+}
+
+.thirdgrid{
+  grid-column: 7/8;
+}
+.row{
+  display: block;
+}
+
+@media (max-width:767px){
+  .hidden-xs{
+    display:none!important
+  }
+  #carousel p{
+    font-size: small !important;
+    text-transform: uppercase;
+  }
+  #carousel{
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .hidden-sm{
+    display:none!important
+  }
+}
+@media (min-width:992px) and (max-width:1199px){
+  .hidden-md{
+    display:none!important
+  }
+}
+@media (min-width:1200px){
+  .hidden-lg{
+    display:none!important
+  }
+  #carousel img{
+    height: 65vh;
+  }
+}
+
+.carousel-item{
+  position: relative;
+}
+
+.carousel-caption{
+  position: inherit;
+  bottom: 20px;
+  right: 10%;
+  left: 10%;
+  background-color: black;
+}
+
+.containerzero{
+  position: relative;
+  left: -15px;
+}

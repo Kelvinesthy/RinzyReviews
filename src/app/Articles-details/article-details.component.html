@@ -1,0 +1,59 @@
+<div class="container-fluid firstBar">
+  <div class="row">
+    <archive-root class="col-lg-2 bg-dark hidden-sm hidden-xs"></archive-root>
+
+    <div class="container-fluid col-lg-7 col-sm-8">
+      <div class="containerMain text-left">
+        <img class="img-responsive" src="{{article.imageUrl}}" alt="{{article.heading}}">
+        <section class="containerOne containerTwo">
+          <small>FILM ARTICLE, RR ORIGINAL</small>
+          <h1 class="display-4 text-left">{{article.heading}}</h1>
+          <div class="text-left" style="display: inline;">
+            <i class="fa fa-clock-o m-2"></i> {{article.date}} | <span><a href="#">Rinzy Reviews Films</a></span> <i class="fa fa-comment mx-2"></i> Leave a comment
+          </div>
+        </section>
+        <section class="containerOne containerThree">
+          <p>It’s been a few years since I became engrossed in the art of film-watching, and a little more for story-writing. It’s also approximately a year since I nursed the idea of  having a platform where I pen my many film (movies and TV) theories and discuss film ideas with a public as enthusiastic about the art as myself. So, here we are – Rinzy Reviews Films: A dream made reality.</p>
+          <p>Though not the best attempt, I strongly believe it’s a step in the ‘write’ direction. I believe, greatly, in planting a vision and nursing it into a mission. And, I know we’ll have great times here making memories we’ll treasure for many years to come.</p>
+          <p>My name is Rinzy Talius Dike, your chief-servant and I say Welcome! Welcome! Welcome!</p>
+          <p>– Rinzy, 2016.</p>
+          <p>Edit:</p>
+
+          <p>Hey guys, thank you for sticking with RR Films over the last two years. I love y’all so much! 😍.</p>
+
+          <p>Like us on FB @ http://www.facebook.com/RinzyReviews</p>
+          <p>Follow on Twitter @ http://www.twitter.com/RinzyReviews</p>
+
+          <p>Follow on IG @ http://www.instagram.com/RinzyReviews</p>
+
+          <p>Join Whatsapp group</p>
+
+          <p>https://chat.whatsapp.com/H7m5hslbmC00TXZ6fRdCDH</p>
+
+          <p>Trust me, the conversation never stops on these platforms.</p>
+
+          <p>– Rinzy, 2018.</p>
+        </section>
+      <hr>
+      </div>
+      <div class="row commentSection my-4 mx-2">
+        <div class="col-md-6">
+          <h3 style="margin: 0;">Comments</h3>
+        </div>
+        <div class="col-md-4">
+          <a (click)="addComment()"><h5>Add Comment</h5></a>
+        </div>
+      </div>
+      <comment-list *ngIf="!addMode" [comments]="article?.comments"></comment-list>
+
+
+      <div class="container p-3 mx-3">
+        <comment-root *ngIf="addMode" (saveNewComment)="saveNewComment($article)" (cancelAddComment)="cancelAddComment()"></comment-root>
+      </div>
+
+    </div>
+
+    <category-root class="col-lg-3 col-sm-4"></category-root>
+  </div>
+</div>
+

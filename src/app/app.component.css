@@ -1,0 +1,53 @@
+.navbar-toggler-icon{
+  background-color: black;
+}
+
+.rinzy-logo{
+  position: relative;
+  left: 5px;
+  font-size: large;
+  font-style: italic;
+  font-weight: 800;
+}
+
+div > ul > li > a.active{
+  color: #f97924;
+}
+
+.nav-link{
+  background-color: black;
+}
+
+@media (min-width: 978px){
+  .nav-link{
+    background-color: white;
+  }
+  div ul li a {
+    color: black;
+    margin-left: 50px;
+    font-size: large;
+    font-weight: 500;
+  }
+}
+
+@media (max-width:767px){
+  .hidden-xs{
+    display:none!important
+  }
+}
+@media (min-width:768px) and (max-width:991px){
+  .hidden-sm{
+    display:none!important
+  }
+}
+@media (min-width:992px) and (max-width:1199px){
+  .hidden-md{
+    display:none!important
+  }
+}
+@media (min-width:1200px){
+  .hidden-lg{
+    display:none!important
+  }
+}
+

@@ -1,0 +1,43 @@
+<div class="row thumbnail  hidden-sm hidden-md hidden-lg" *ngFor='let article of articles'>
+  <a class="container-fluid" [routerLink]="['/articles', article.heading]">
+    <section class="article-grid p-3">
+      <img class="article-img img-responsive" src="{{ article.imageUrl }}" alt="Bad boys">
+      <h3 class="article-heading">{{ article.heading }}</h3>
+      <section class="article-message">{{article.date | date}} || Leave a comment</section>
+    </section>
+  </a>
+</div>
+
+
+
+<article class="hidden-xs containerMain row px-3" *ngFor="let article of articles">
+  <a [routerLink]="['/articles', article.heading]"><img src="{{article.imageUrl}}"  alt="{{article.heading}}" class="img-adapt"></a>
+  <section class="containerOne containerTwo">
+    <a [routerLink]="['/articles', article.heading]"><h1 class="display-4 text-left p-3">{{article.heading}}</h1></a>
+    <div>
+      {{article.date}} |  <i class="fa fa-comment mx-2"></i> Leave a comment
+    </div>
+  </section>
+  <section class="containerOne containerThree">
+    <p>It’s been a few years since I became engrossed in the art of film-watching, and a little more for story-writing. It’s also approximately a year since I nursed the idea of  having a platform where I pen my many film (movies and TV) theories and discuss film ideas with a public as enthusiastic about the art as myself. So, here we are – Rinzy Reviews Films: A dream made reality.</p>
+    <p>Though not the best attempt, I strongly believe it’s a step in the ‘write’ direction. I believe, greatly, in planting a vision and nursing it into a mission. And, I know we’ll have great times here making memories we’ll treasure for many years to come.</p>
+    <p>My name is Rinzy Talius Dike, your chief-servant and I say Welcome! Welcome! Welcome!</p>
+    <p>– Rinzy, 2016.</p>
+    <p>Edit:</p>
+
+    <p>Hey guys, thank you for sticking with RR Films over the last two years. I love y’all so much! 😍.</p>
+
+    <p>Like us on FB @ http://www.facebook.com/RinzyReviews</p>
+    <p>Follow on Twitter @ http://www.twitter.com/RinzyReviews</p>
+
+    <p>Follow on IG @ http://www.instagram.com/RinzyReviews</p>
+
+    <p>Join Whatsapp group</p>
+
+    <p>https://chat.whatsapp.com/H7m5hslbmC00TXZ6fRdCDH</p>
+
+    <p>Trust me, the conversation never stops on these platforms.</p>
+
+    <p>– Rinzy, 2018.</p>
+  </section>
+</article>

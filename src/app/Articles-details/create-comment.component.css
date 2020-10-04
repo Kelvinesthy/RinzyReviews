@@ -1,0 +1,20 @@
+em {float:right; color:#e04c65; padding-left: 10px}
+.error ::-webkit-input-placeholder {color: #999;}
+.error input, .error textarea  {background-color: #e3c3c5;}
+.error ::-moz-placeholder {color: #999;}
+.error :-moz-placholder {color: #999;}
+.error :ms-input-placeholder {color: #999;}
+
+div h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.btn-primary{
+  background-color: green;
+  color: white;
+  width: 30%;
+}
+.btn-group{
+  float: right;
+}
