@@ -3,7 +3,7 @@ import { IARTICLE } from "./article";
 import { ArticleService } from './article.service';
 import { ActivatedRoute } from "@angular/router";
 
-declare let toastr: any
+
 @Component({
   selector: 'article-root',
   templateUrl: './article.component.html',

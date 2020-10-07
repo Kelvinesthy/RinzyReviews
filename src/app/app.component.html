@@ -46,12 +46,14 @@
     <form id="searchForm">
       <div class="form-group input-group">
         <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search....." aria-describedby="search-text">
-        <span class="input-group-append">888<i class="fa fa-search">888</i></span> <!-------Remove later-------->
       </div>
       <ul class=" list-group list-group-flush"><!-------results of ngFor is passed to appfilter with argument searchTerm--------->
-        <li class="list-group-item" *ngFor="let c of characters | appFilter: searchTerm" appHighlight [searchedWord]="searchTerm"
-          [content]="c" [classToApply]= "'font-weight-bold'" [setTitle]="'true'">{{c}}</li>
+        <a class="list-group-item" *ngFor="let c of characters | appFilter: searchTerm" appHighlight [searchedWord]="searchTerm"
+          [content]="c" [classToApply]= "'font-weight-bold'" [setTitle]="'true'">{{c}}</a>
       </ul>
+
+
+
     </form>
 
   </div>

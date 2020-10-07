@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './user';
-import { IARTICLE, ArticleService } from './articles';
+import { IARTICLE, ArticleService } from './Articles/index';
 
 @Component({
   selector: 'app-root',

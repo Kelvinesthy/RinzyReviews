@@ -2,7 +2,7 @@ import {
     ProfileComponent,
     LoginComponent
 
-  } from './index';
+  } from '.';
 
 export const userRoutes = [
   {path: 'profile', component: ProfileComponent},
